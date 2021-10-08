@@ -3,6 +3,16 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+
+  background: url(/images/bg-mobile.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  @include breakpoint(large) {
+    background: url(/images/bg-desktop.png) no-repeat center center fixed; ;
+  }
 }
 
 *,
@@ -15,12 +25,4 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-kumbh);
-  background-image: url(/images/bg-mobile.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  @include breakpoint(large) {
-    background-image: url(/images/bg-desktop.png);
-    background-size: 100%;
-  }
 }

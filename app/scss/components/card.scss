@@ -1,0 +1,63 @@
+@use '../util/' as *;
+
+.card {
+  background-color: #fff;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  border-radius: rem(15);
+
+  box-shadow: -1px 10px 50px -21px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 10px 50px -21px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 10px 50px -21px rgba(0, 0, 0, 0.75);
+
+  &__img {
+    img {
+      width: 100%;
+      border-radius: rem(15) rem(15) 0 0;
+    }
+  }
+
+  &__photo {
+    position: relative;
+    bottom: rem(57);
+    margin-bottom: rem(-57);
+
+    img {
+      border: rem(5) solid #fff;
+      border-radius: 100%;
+    }
+  }
+
+  &__text {
+    margin: rem(25) 0 rem(26);
+
+    span {
+      padding-left: rem(5);
+      color: var(--dark-gray);
+      font-weight: 400;
+    }
+
+    h2 {
+      padding-top: rem(13);
+    }
+  }
+
+  &__num {
+    padding: rem(24) rem(40);
+    border-top: rem(1) solid hsl(330, 5, 92);
+    display: inherit;
+    flex-flow: row;
+    justify-content: space-around;
+
+    @include breakpoint(large) {
+        padding: rem(24) rem(55);
+        justify-content: space-between;
+    }
+
+    span {
+      font-weight: 700;
+      letter-spacing: rem(0.5);
+    }
+  }
+}
