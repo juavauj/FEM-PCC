@@ -1,8 +1,30 @@
+@use '../util/' as *;
+
 h1,
 h2,
 h3 {
     margin: 0;
     line-height: 1.1;
+}
+
+h1 {
+    font-weight: 700;
+    color: var(--very-dark-blue);
+    font-size: rem(18);
+}
+
+h2 {
+    font-weight: 400;
+    color: var(--dark-gray);
+    font-size: rem(14);
+}
+
+p {
+    font-weight: 400;
+    font-size: rem(10);
+    letter-spacing: rem(1.6);
+    color: var(--dark-gray-blue);
+    margin: rem(5) 0 0;
 }
 
 a,
